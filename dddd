@@ -1,0 +1,23 @@
+/*
+
+    LDR  المقاومة الضوئية
+ القرية الهندسية - Engineering village   
+ www.ev-center.com    
+*/
+
+//تعريف المتغيرات
+int sensorValue=0;
+int sensorPin=A5;
+
+void setup()
+{
+  Serial.begin(9600);//تفعيل شاشة المراقب التسلسلي
+}
+
+void loop()
+{
+  sensorValue=analogRead(sensorPin);//قراءة القيمة التناظرية للقيمة المقاومة الضوئية وتخزينها في متغير
+  Serial.println(sensorValue);
+  delay(500);
+}
+
